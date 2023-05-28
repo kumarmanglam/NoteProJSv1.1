@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://fav.farm/🔥" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="menu-wrap" onclick="toggleSidebar()">
+        <img src="./icons/menu.svg" alt="menu" class="menu-icon">
+      </div>
+      <img src="./icons/note-icon.png" alt="icon" class="icon-img">
+      <p class="logo-title">NotePro <span class="v2">v2</span></p>
+    </div>
+    <div class="wrapper">
+      <div class="sidebar" onmouseenter="toggleSidebar()" onmouseleave="toggleSidebar()">
+        <ul class="list-items">
+          <li class="list-item selected">
+            <div class="img-wrap">
+              <img class="bulb-icon list-icon" src="./icons/bulb.svg" alt="note">
+            </div>
+            <p class="list-item-text"> Notes </p>
+          </li>
+          <!-- <li class="list-item">
+            <div class="img-wrap">
+              <img class="bulb-icon list-icon" src="./icons/archive.svg" alt="note">
+            </div>
+            <p class="list-item-text" onfocus="handleSidebar()"> Archive </p>
+          </li>
+          <li class="list-item">
+            <div class="img-wrap">
+              <img class="bulb-icon list-icon" src="./icons/trash.svg" alt="note">
+            </div>
+            <p class="list-item-text"> Trash </p>
+          </li> -->
+        </ul>
+      </div>
+      <div class="content">
+        <div class="sub-head">
+          <div class="form">
+            <input class="input title" type="text" name="title" id="" placeholder="Title">
+            <input class="input text" type="text" name="text" id="" placeholder="Take a note..." onfocus="showTitle()" >
+            <button class="inp-btn" type="submit" onclick="handleSubmit(event)"> Submit</button>
+          </div>
+        </div>
+        <div class="main">
+          <!-- <div class="card" data-id="">
+            <div class="card-content">
+              <p class="head">
+                Title
+              </p>
+              <p class="body">
+                Take a note...
+              </p>
+            </div>
+            <div class="card-actions">
+              <Button class="del-btn"><img class="delete-icon" src="./icons/delete-icon.svg" alt=""></Button>
+            </div>
+          </div> -->
+        </div>
+        <div class="dialogue-box" data-card-id="">
+          <div class="dialogue-content">
+            <p class="dial-head" contenteditable="true" aria-placeholder="Title">
+              
+            </p>
+            <p class="dial-text" contenteditable="true">
+              
+            </p>
+          </div>
+          <div class="dialogue-actions">
+            <button class="close-btn" onclick="closeDialogue(event)">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+
+</html>
